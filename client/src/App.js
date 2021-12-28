@@ -10,7 +10,6 @@ import UserBookings from './pages/UserBookings';
 import AddCar from './pages/AddCar';
 import AdminHome from './pages/AdminHome';
 import EditCar from './pages/EditCar';
-import { useParams } from 'react-router-dom';
 import Protect from './pages/Protect';
 
 
