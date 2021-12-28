@@ -16,17 +16,7 @@ import Protect from './pages/Protect';
 
 function App() {
   
-  // const {props} = useParams();
-  // function ProtectedRoute() {
-  //     // const navigate = useNavigate();
-  //     if (localStorage.getItem('user')) {
-  //       return <Route {...props} />;
-  //     }
-  //     else {
-  //       // return navigate("/login")
-  //       return <Navigate to="/login" />
-  //     }
-  //   }
+  
   return (
     <div className="App">
     
