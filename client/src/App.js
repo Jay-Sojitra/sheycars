@@ -15,17 +15,6 @@ import { useParams } from 'react-router-dom';
 
 function App() {
   
-  // const {props} = useParams();
-  // function ProtectedRoute() {
-  //     // const navigate = useNavigate();
-  //     if (localStorage.getItem('user')) {
-  //       return <Route {...props} />;
-  //     }
-  //     else {
-  //       // return navigate("/login")
-  //       return <Navigate to="/login" />
-  //     }
-  //   }
   return (
     <div className="App">
     
