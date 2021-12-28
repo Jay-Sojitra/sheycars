@@ -14,7 +14,7 @@ function Home() {
     const { loading } = useSelector(state => state.alertsReducer)
     const [totalcars, setTotalcars] = useState([])
     const dispatch = useDispatch()
-    // console.log(`${cars.length}`)
+    
 
     useEffect(() => {
         dispatch(getAllCars())
@@ -52,8 +52,13 @@ function Home() {
         setTotalcars(temp)
     }
 
+    
     return (
+
         <DefaultLayout>
+
+            {/* {user &&  */}
+
 
             <Row className='mt-3' justify="center">
                 <Col lg={20} sm={24} className='d-flex justify-content-left'>
@@ -61,8 +66,8 @@ function Home() {
                 </Col>
             </Row>
 
-            {loading === true && (<Spinner />)}
 
+            {loading === true && (<Spinner />)}
             <Row justify='center' gutter={16} key={cars._id} >
                 {totalcars.map(car => {
                     return <Col lg={5} sm={24} xs={24} key={car._id} >
@@ -85,7 +90,10 @@ function Home() {
 
                 })}
             </Row>
-        </DefaultLayout>
+
+
+        </DefaultLayout >
+
     )
 }
 
@@ -93,4 +101,3 @@ function Home() {
 export default Home
 
 
-    

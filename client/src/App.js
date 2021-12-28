@@ -11,6 +11,7 @@ import AddCar from './pages/AddCar';
 import AdminHome from './pages/AdminHome';
 import EditCar from './pages/EditCar';
 import { useParams } from 'react-router-dom';
+import Protect from './pages/Protect';
 
 
 function App() {
@@ -31,7 +32,8 @@ function App() {
     
       <Router>
         <Routes>
-          <Route path="/" exact element={<Home />} />
+         
+          <Route path="/" exact element={<Protect> <Home /></Protect>} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/booking/:carid"  element={<BookingCars/>} />
@@ -48,16 +50,16 @@ function App() {
 }
 export default App;
 
-// export function ProtectedRoute({ props }) {
-//   // const navigate = useNavigate();
-//   if (localStorage.getItem('user')) {
-//     return <Route {...props} />;
-//   }
-//   else {
-//     // return navigate("/login")
-//     return <Navigate to="/login" />
-//   }
-// }
+export function ProtectedRoute({ props }) {
+  // const navigate = useNavigate();
+  if (localStorage.getItem('user')) {
+    return <Route {...props} />;
+  }
+  else {
+    // return navigate("/login")
+    return <Navigate to="/login" />
+  }
+}
 
 // export function ProtectedRoute({ props }) {
   
